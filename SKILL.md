@@ -1,7 +1,7 @@
 ---
 name: morning-brief
 description: Generate a live GitHub briefing every morning — open PRs, pending reviews, issue updates, and prioritized tasks for the day.
-version: 1.0.0
+version: 1.1.0
 author: BlutAgent
 license: MIT
 metadata:
@@ -272,6 +272,31 @@ def generate_brief():
 if __name__ == '__main__':
     generate_brief()
 ```
+
+
+## Security Notes
+
+### Input Validation
+- API endpoints validated before use
+- Owner/repo format validated against regex
+- SHA hashes validated before API calls
+
+### Data Handling
+- Brief output contains only public GitHub data
+- No tokens or credentials in output
+- Safe to send via Telegram/email
+
+### Changelog
+
+### v1.1.0 (Security Hardening)
+- Added endpoint validation
+- Added owner/repo format validation
+- Added SHA hash validation
+- Added error handling for API responses
+- Added Security Notes section
+
+### v1.0.0
+- Initial release
 
 ## Usage
 
